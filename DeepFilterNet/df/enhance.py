@@ -178,7 +178,7 @@ def init_df(
         suffix += "_pf"
     logger.info("Running on device {}".format(get_device()))
     logger.info("Model loaded")
-    return model, df_state, suffix
+    return model, df_state, None # ignore suffix
 
 
 def df_features(audio: Tensor, df: DF, nb_df: int, device=None) -> Tuple[Tensor, Tensor, Tensor]:
